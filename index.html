@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Basic</title>
+	body >
+  <style>
+    body{
+      background-color:#CEC2FF; 
+    }
+  </style>
+</head>
+
+<body>
+  <h3>1. Write a program to print your name and address, <br>
+
+2. Write a program to check whether value and data-type of two variable are same. <br>
+
+3. Write a program to add two strings and return them with all alphabet capital. <br>
+
+4. Write a JavaScript program to convert the length of a given string in bytes. <br>
+
+5. Write a JavaScript program to round a number to a specified amount of digits.</h3>   <br>
+
+<script>
+   
+   // question 1
+    let name = "1.Bhaskar Kumar";
+let address = "Patna, Bihar";
+
+
+document.writeln(name);
+document.writeln(address);
+
+// question 2
+let a =8 ;
+let b = "8";
+
+if (a === b) {
+  document.writeln("<br>2.)value and data type are same");
+} else {
+  document.writeln("<br>2.)value and data type are different");
+}
+
+// question 3
+let str1 = "hello";
+let str2 = "bhaskar";
+let result = (str1 + " " +str2).toUpperCase();
+
+document.writeln("<br>3.)Result:", result);
+
+
+
+//question 4
+
+function stringsizeinbytes(str) {
+    const blob = new Blob([str]);
+    return blob.size;
+  }
+  
+  
+  const inputString = "Bhaskar Kumar";
+  const sizeInBytes = stringsizeinbytes(inputString);
+  document.writeln(`<br>4.)The size of the string "${inputString}" is ${sizeInBytes} bytes.`);
+
+
+
+
+// question 5
+function roundToDigits(num, digits) {
+    const factor = Math.pow(10, digits);
+    return Math.round(num * factor) / factor;
+  }
+  
+
+  const number = 3.14567;
+  const roundedNumber = roundToDigits(number, 3);
+  document.writeln("<br>5.)",roundedNumber); 
+  
+
+</script>
+</body>
+</html>
